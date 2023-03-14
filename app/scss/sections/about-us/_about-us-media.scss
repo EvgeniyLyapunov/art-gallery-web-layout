@@ -1,0 +1,16 @@
+@media (max-width: 576px) {
+  .about-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__title {
+      margin-bottom: 12px;
+      font-size: 28px;
+      line-height: 38px;
+    }
+    &__text {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+}

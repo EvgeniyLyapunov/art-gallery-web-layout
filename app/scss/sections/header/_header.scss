@@ -1,0 +1,300 @@
+.header {
+  &__logo {
+    display: block;
+    max-width: 173px;
+    margin-right: 179px;
+  }
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-panel {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background:#000;
+    }
+    &-block {
+      position: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+    }
+    &-item {
+      margin-right: 62px;
+      &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    transition: 0.3s color ease-in-out;
+    z-index: 1;
+    &::after {
+      position: absolute;
+      content: "";
+      top: -3px;
+      right: -8px;
+      bottom: -5px;
+      left: -8px;
+      background-color: $state-dark;
+      transition: 0.3s opacity ease-in-out;
+      z-index: -1;
+      opacity: 0;
+    }
+    &:focus::after {
+      opacity: 1;
+    }
+    &:hover {
+      color: $state-semi-light;
+    }
+    &:active {
+      color: $state-dark;
+    }
+    &:active::after {
+      opacity: 0;
+    }
+  }
+  &__entrance {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      right: 59px;
+      width: 13px;
+      height: 13px;
+      background-image: url("../../../image/icons/entrance.svg");
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+    &:hover::after {
+      right: 58px;;
+      width: 18px;
+      background-image: url("../../../image/icons/entrance-hover.svg");
+    }
+    &:active::after {
+      right: 58px;
+      width: 18px;
+      background-image: url("../../../image/icons/entrance-active.svg");
+    }
+    &-link {
+      position: relative;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color:#fff;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -3px;
+        right: -8px;
+        bottom: -5px;
+        left: -29px;
+        background-color: $state-dark;
+        z-index: -1;
+        opacity: 0;
+      }
+      &:focus::after {
+        opacity: 1;
+      }
+      &:hover {
+        color: $state-semi-light;
+      }
+      &:active {
+        color: $state-dark;
+      }
+      &:active::after {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+  &__search {
+    &-desk {
+      position: relative;
+      display: flex;
+      min-width: 247px;
+      padding-left: 31px;
+      cursor: pointer;
+    }
+    &-text {
+      &-desk {
+        width: 218px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color:#fff;
+        cursor: pointer;
+        &:hover {
+          border: none;
+          border-bottom: 1px solid $state-semi-light;
+          color:#fff;
+          outline: none;
+        }
+        &:focus {
+          border: none;
+          border-bottom: 1px solid $state-dark;
+          color:#fff;
+          outline: none;
+          &::-webkit-input-placeholder {
+            color: transparent;
+          } 
+          &::-moz-placeholder {
+            color: transparent;
+          }
+          &:-moz-placeholder {
+            color: transparent;
+          }
+          &:-ms-input-placeholder {
+            color: transparent;
+          }
+        }
+        &::-webkit-input-placeholder {
+          color:rgba(255, 255, 255, 0.85);
+        } 
+        &::-moz-placeholder {
+          color:rgba(255, 255, 255, 0.85);
+        }
+        &:-moz-placeholder {
+          color:rgba(255, 255, 255, 0.85);
+        }
+        &:-ms-input-placeholder {
+          color:rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+    &-icon-mobile {
+      display: none;
+    }
+    &-form-mobile {
+      display: none;
+    }
+  }
+  &__submit {
+    &-desk {
+      position: absolute;
+      top: 6px;
+      left: -2px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      background-color:transparent;
+      border: none;
+      background: url("../../../image/icons/search-icon.svg") no-repeat center/cover;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__menu-close {
+    display: none;
+  }
+  &__catalog {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    background-color: rgba(0, 0, 0, 0.5);
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &-section {
+      position: relative;
+      margin-right: 99px;
+      padding-right: 14px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color:#fff;
+      cursor: pointer;
+      background-image: url("../../../image/icons/shevron-drop-down.svg");
+      background-position:right 0px bottom 6px;
+      background-repeat:no-repeat;
+      background-size: 12px 7px;
+      z-index: 1;
+      &:last-child {
+        margin-right: 0;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        top: -3px;
+        right: -8px;
+        bottom: -5px;
+        left: -8px;
+        background-color: $state-dark;
+        background-image: url("../../../image/icons/shevron-drop-down.svg");
+        background-position:right 8px bottom 11px;
+        background-repeat:no-repeat;
+        background-size: 12px 7px;
+        z-index: -1;
+        opacity: 0;
+      }
+      &:focus::before {
+        outline: none;
+        opacity: 1;
+      }
+      &:active::before {
+        outline: none;
+        opacity: 0;
+        color: $state-dark;
+        background-image: url("../../../image/icons/shevron-drop-down-active.svg");
+        background-position:right 0px bottom 6px;
+        background-repeat:no-repeat;
+        background-size: 12px 7px;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        color: $state-semi-dark;
+        background-image: url("../../../image/icons/shevron-drop-down-hover.svg");
+      }
+      &:active {
+        color: $state-dark;
+        background-image: url("../../../image/icons/shevron-drop-down-active.svg");
+        background-position:right 0px bottom 6px;
+        background-repeat:no-repeat;
+        background-size: 12px 7px;
+      }
+      &:hover:focus::before {
+        background-image: url("../../../image/icons/shevron-drop-down-hover.svg");
+      }
+      &_open {
+        background-image: url("../../../image/icons/shevron-drop-down-open.svg");
+        background-position:right 0px bottom 6px;
+        background-repeat:no-repeat;
+        background-size: 12px 7px;
+      }
+    }
+  }
+
+}
+
+.hamburger {
+  display: none;
+}

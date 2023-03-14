@@ -1,0 +1,150 @@
+.drop-down {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 47px;
+  width: 300px;
+  height: 300px;
+  padding: 40px 0; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  opacity: 0;
+  &_active {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  &__scroll-aria {
+    width: 300px;
+    height: 220px;
+    padding: 0 40px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    padding-left: 14px;
+    margin-bottom: 20px;
+    color:#fff;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    .drop-down__link {
+      &:focus {
+        outline: none;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      outline: 2px solid $state-semi-dark;
+      outline-offset: -2px;
+    }
+    &:active .drop-down__link {
+      z-index: 2;
+    }
+    &:active::before {
+      opacity: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color:  rgba(194, 131, 243, 0.4);
+      opacity: 0;
+    }
+    &-focus {
+      outline: 2px solid $state-semi-dark;
+      outline-offset: -2px;
+    }
+    // reality
+    &_tintoretto {
+      background-image: url("../../../image/backgrounds/drop-down-bg/reality/tintoretto-bg.jpg");
+    }
+    &_fridrih {
+      background-image: url("../../../image/backgrounds/drop-down-bg/reality/fridrih-bg.jpg");
+    }
+    &_leonardo {
+      background-image: url("../../../image/backgrounds/drop-down-bg/reality/leonardo-bg.jpg");
+    }
+    &_verrokkyo {
+      background-image: url("../../../image/backgrounds/drop-down-bg/reality/verrokkyo-bg.jpg");
+    }
+    // impression
+    &_mone {
+      background-image: url("../../../image/backgrounds/drop-down-bg/impression/mone-bg.jpg");
+    }
+    &_sisley {
+      background-image: url("../../../image/backgrounds/drop-down-bg/impression/sisley-bg.jpg");
+    }
+    &_mane {
+      background-image: url("../../../image/backgrounds/drop-down-bg/impression/mane-bg.jpg");
+    }
+    &_renuar {
+      background-image: url("../../../image/backgrounds/drop-down-bg/impression/renuar-bg.jpg");
+    }
+    // postimpression
+    &_vangog {
+      background-image: url("../../../image/backgrounds/drop-down-bg/postimpression/vangog-bg.jpg");
+    }
+    &_sezann {
+      background-image: url("../../../image/backgrounds/drop-down-bg/postimpression/sezan-bg.jpg");
+    }
+    &_gugen {
+      background-image: url("../../../image/backgrounds/drop-down-bg/postimpression/gugen-bg.jpg");
+    }
+    &_syora {
+      background-image: url("../../../image/backgrounds/drop-down-bg/postimpression/syora-bg.jpg");
+    }
+    // avangard
+    &_kandinskiy {
+      background-image: url("../../../image/backgrounds/drop-down-bg/avangard/kandinskiy-bg.jpg");
+    }
+    &_marinetty {
+      background-image: url("../../../image/backgrounds/drop-down-bg/avangard/marinetty-bg.jpg");
+    }
+    &_malevich {
+      background-image: url("../../../image/backgrounds/drop-down-bg/avangard/malevich-bg.jpg");
+    }
+    &_picasso {
+      background-image: url("../../../image/backgrounds/drop-down-bg/avangard/picasso-bg.jpg");
+    }
+    // futurism 
+    &_karra {
+      background-image: url("../../../image/backgrounds/drop-down-bg/futurism/karra-bg.jpg");
+    }
+    &_pratella {
+      background-image: url("../../../image/backgrounds/drop-down-bg/futurism/pratella-bg.jpg");
+    }
+    &_severiny {
+      background-image: url("../../../image/backgrounds/drop-down-bg/futurism/severiny-bg.jpg");
+    }
+    &_balla {
+      background-image: url("../../../image/backgrounds/drop-down-bg/futurism/balla-bg.jpg");
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+  }
+}
+
+.simplebar-track {
+  right: 17px;
+  bottom: 0;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 3px;
+  background-color: #000;
+}
+
+.simplebar-scrollbar {
+  background-color:#fff;
+}
