@@ -1,8 +1,7 @@
-"use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
   // подключаем свайпер на главный экран
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.hero__swiper', {
     autoplay: {
       delay: 5000,
     },
@@ -10,6 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeEffect: {
       crossFade: true
     }
+  });
+
+  // подключаем свайпер в Галерею
+  const gallerySwiper = new Swiper('.gallery__swiper', {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
   
   // Drop down
@@ -104,5 +115,16 @@ document.addEventListener("DOMContentLoaded", () => {
       item.style.opacity = "1";
     }
   }
+
+  const gallerySelect = document.querySelector('.gallery__select-input');
+  const choices = new Choices(gallerySelect, {
+    items: [{
+      value: ""
+    }],
+    searchEnabled: false,
+    allowHTML: false,
+    itemSelectText: "",
+    position: "bottom",
+  });
 
 });

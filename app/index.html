@@ -1,266 +1,264 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blanchard Gallery</title>
-  <link rel="shortcut icon" href="image/favicon/Blanchard.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <section class="promo">
-    <header class="header">
-      <div class="header__nav-panel">
-        <div class="container">
-          <nav class="header__nav">
-            <img class="hamburger" src="image/icons/Burger.svg" alt="кнопка раскрытия меню">
-            <picture>
-              <source srcset="image/logo/logo-320.svg" media="(max-width: 700px)">
-              <source srcset="image/logo/logo-1024.svg" media="(max-width: 1240px)">
-              <img class="header__logo" src="image/logo/logo.svg" alt="логотип сайта" >
-            </picture>
-            <div class="header__nav-block">
-              <img class="header__menu-close" src="image/icons/X.svg" alt="закрыть меню">
-              <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#" class="header__link">О нас</a></li>
-                <li class="header__nav-item"><a href="#" class="header__link">Галерея</a></li>
-                <li class="header__nav-item"><a href="#" class="header__link">Каталог</a></li>
-                <li class="header__nav-item"><a href="#" class="header__link">События</a></li>
-                <li class="header__nav-item"><a href="#" class="header__link">Проекты</a></li>
-                <li class="header__nav-item"><a href="#" class="header__link">Контакты</a></li>
-              </ul>
-              <label class="header__entrance" for="header__entrance-link">
-                <a class="header__entrance-link" href="#" id="header__entrance-link">Войти</a>
-              </label>
-            </div>
-            <!-- форма поиска для мобильных breakpoints -->
-            <img class="header__search-icon-mobile" src="image/icons/search-icon-1024.svg" alt="кнопка показа скрытого поля для ввода поискового запроса">
-            <form class="header__search-form-mobile" action="">
-              <button class="header__search-btn-mobile" aria-label="кнопка начать поиск">
-                <img src="image/icons/search-icon-1024.svg" alt="иконка лупы">
-              </button>
-              <input class="header__search-input-mobile" aria-label="поле для ввода поискового запроса" type="text">
-              <svg class="header__search-close-mobile" tabindex="0" aria-label="кнопка закрытия формы поиска" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)" fill="white"/>
-                <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9074)" fill="white"/>
-              </svg>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanchard Gallery</title>
+    <link rel="shortcut icon" href="image/favicon/Blanchard.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <section class="promo">
+      <header class="header">
+        <div class="header__nav-panel">
+          <div class="container">
+            <nav class="header__nav">
+              <img class="hamburger" src="image/icons/Burger.svg" alt="кнопка раскрытия меню">
+              <picture>
+                <source srcset="image/logo/logo-320.svg" media="(max-width: 700px)">
+                <source srcset="image/logo/logo-1024.svg" media="(max-width: 1240px)">
+                <img class="header__logo" src="image/logo/logo.svg" alt="логотип сайта" >
+              </picture>
+              <div class="header__nav-block">
+                <img class="header__menu-close" src="image/icons/X.svg" alt="закрыть меню">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item"><a href="#" class="header__link">О нас</a></li>
+                  <li class="header__nav-item"><a href="#" class="header__link">Галерея</a></li>
+                  <li class="header__nav-item"><a href="#" class="header__link">Каталог</a></li>
+                  <li class="header__nav-item"><a href="#" class="header__link">События</a></li>
+                  <li class="header__nav-item"><a href="#" class="header__link">Проекты</a></li>
+                  <li class="header__nav-item"><a href="#" class="header__link">Контакты</a></li>
+                </ul>
+                <label class="header__entrance" for="header__entrance-link">
+                  <a class="header__entrance-link" href="#" id="header__entrance-link">Войти</a>
+                </label>
+              </div>
+              <!-- форма поиска для мобильных breakpoints -->
+              <img class="header__search-icon-mobile" src="image/icons/search-icon-1024.svg" alt="кнопка показа скрытого поля для ввода поискового запроса">
+              <form class="header__search-form-mobile" action="">
+                <button class="header__search-btn-mobile" aria-label="кнопка начать поиск">
+                  <img src="image/icons/search-icon-1024.svg" alt="иконка лупы">
+                </button>
+                <input class="header__search-input-mobile" aria-label="поле для ввода поискового запроса" type="text">
+                <svg class="header__search-close-mobile" tabindex="0" aria-label="кнопка закрытия формы поиска" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)" fill="white"/>
+                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9074)" fill="white"/>
+                </svg>
+              </form>
+            </nav>
+          </div>
+        </div>
+        
+        <div class="header__catalog">
+          <div class="container container_flex">
+            <ul class="header__catalog-list">
+              <li class="header__catalog-section" tabindex="0">
+                <span>Реализм</span>
+                <div class="drop-down" aria-hidden="true">
+                  <div class="drop-down__scroll-aria" data-simplebar">
+                    <ul class="drop-down__list">
+                      <li class="drop-down__item drop-down__item_tintoretto">
+                        <a href="#" class="drop-down__link">Тинторетто</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_fridrih">
+                        <a href="#" class="drop-down__link">Фридрих</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_leonardo">
+                        <a href="#" class="drop-down__link">Леонардо</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_verrokkyo">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_verrokkyo">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_verrokkyo">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_verrokkyo">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_verrokkyo">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="header__catalog-section" tabindex="0">
+                <span>Импрессионизм</span>
+                <div class="drop-down" aria-hidden="true">
+                  <div class="drop-down__scroll-aria" data-simplebar">
+                    <ul class="drop-down__list">
+                      <li class="drop-down__item drop-down__item_mone">
+                        <a href="#" class="drop-down__link">Моне</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_sisley">
+                        <a href="#" class="drop-down__link">Сислей</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_mane">
+                        <a href="#" class="drop-down__link">Мане</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_renuar">
+                        <a href="#" class="drop-down__link">Ренуар</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_renuar">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_renuar">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_renuar">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_renuar">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="header__catalog-section" tabindex="0">
+                <span>Постимпрессионизм</span>
+                <div class="drop-down" aria-hidden="true">
+                  <div class="drop-down__scroll-aria" data-simplebar">
+                    <ul class="drop-down__list">
+                      <li class="drop-down__item drop-down__item_vangog">
+                        <a href="#" class="drop-down__link">Ван Гог</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_sezann">
+                        <a href="#" class="drop-down__link">Сезанн</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_gugen">
+                        <a href="#" class="drop-down__link">Гоген</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_syora">
+                        <a href="#" class="drop-down__link">Сёра</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_syora">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_syora">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_syora">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_syora">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="header__catalog-section" tabindex="0">
+                <span>Авангард</span>
+                <div class="drop-down" aria-hidden="true">
+                  <div class="drop-down__scroll-aria" data-simplebar">
+                    <ul class="drop-down__list">
+                      <li class="drop-down__item drop-down__item_kandinskiy">
+                        <a href="#" class="drop-down__link">Кандинский</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_marinetty">
+                        <a href="#" class="drop-down__link">Маринетти</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_malevich">
+                        <a href="#" class="drop-down__link">Малевич</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_picasso">
+                        <a href="#" class="drop-down__link">Пикассо</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_picasso">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_picasso">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_picasso">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_picasso">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="header__catalog-section" tabindex="0">
+                <span>Футуризм</span>
+                <div class="drop-down" aria-hidden="true">
+                  <div class="drop-down__scroll-aria" data-simplebar">
+                    <ul class="drop-down__list">
+                      <li class="drop-down__item drop-down__item_karra">
+                        <a href="#" class="drop-down__link">Карра</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_pratella">
+                        <a href="#" class="drop-down__link">Прателла</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_severiny">
+                        <a href="#" class="drop-down__link">Северини</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_balla">
+                        <a href="#" class="drop-down__link">Балла</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_balla">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_balla">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_balla">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                      <li class="drop-down__item drop-down__item_balla">
+                        <a href="#" class="drop-down__link">Кто-то ещё</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <form class="header__search-desk">
+              <button class="header__submit-desk" aria-label="кнопка поиска"></button>
+              <input class="header__search-text-desk" type="text" name="search-text" aria-label="поле для ввода поискового запроса" placeholder="Поиск по сайту">
             </form>
-          </nav>
+          </div>
         </div>
-      </div>
-      
-      <div class="header__catalog">
-        <div class="container container_flex">
-          <ul class="header__catalog-list">
-            <li class="header__catalog-section" tabindex="0">
-              <span>Реализм</span>
-              <div class="drop-down" aria-hidden="true">
-                <div class="drop-down__scroll-aria" data-simplebar">
-                  <ul class="drop-down__list">
-                    <li class="drop-down__item drop-down__item_tintoretto">
-                      <a href="#" class="drop-down__link">Тинторетто</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_fridrih">
-                      <a href="#" class="drop-down__link">Фридрих</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_leonardo">
-                      <a href="#" class="drop-down__link">Леонардо</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_verrokkyo">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_verrokkyo">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_verrokkyo">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_verrokkyo">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_verrokkyo">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-  
-            <li class="header__catalog-section" tabindex="0">
-              <span>Импрессионизм</span>
-              <div class="drop-down" aria-hidden="true">
-                <div class="drop-down__scroll-aria" data-simplebar">
-                  <ul class="drop-down__list">
-                    <li class="drop-down__item drop-down__item_mone">
-                      <a href="#" class="drop-down__link">Моне</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_sisley">
-                      <a href="#" class="drop-down__link">Сислей</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_mane">
-                      <a href="#" class="drop-down__link">Мане</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_renuar">
-                      <a href="#" class="drop-down__link">Ренуар</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_renuar">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_renuar">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_renuar">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_renuar">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-  
-            <li class="header__catalog-section" tabindex="0">
-              <span>Постимпрессионизм</span>
-              <div class="drop-down" aria-hidden="true">
-                <div class="drop-down__scroll-aria" data-simplebar">
-                  <ul class="drop-down__list">
-                    <li class="drop-down__item drop-down__item_vangog">
-                      <a href="#" class="drop-down__link">Ван Гог</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_sezann">
-                      <a href="#" class="drop-down__link">Сезанн</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_gugen">
-                      <a href="#" class="drop-down__link">Гоген</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_syora">
-                      <a href="#" class="drop-down__link">Сёра</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_syora">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_syora">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_syora">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_syora">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-  
-            <li class="header__catalog-section" tabindex="0">
-              <span>Авангард</span>
-              <div class="drop-down" aria-hidden="true">
-                <div class="drop-down__scroll-aria" data-simplebar">
-                  <ul class="drop-down__list">
-                    <li class="drop-down__item drop-down__item_kandinskiy">
-                      <a href="#" class="drop-down__link">Кандинский</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_marinetty">
-                      <a href="#" class="drop-down__link">Маринетти</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_malevich">
-                      <a href="#" class="drop-down__link">Малевич</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_picasso">
-                      <a href="#" class="drop-down__link">Пикассо</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_picasso">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_picasso">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_picasso">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_picasso">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-  
-            <li class="header__catalog-section" tabindex="0">
-              <span>Футуризм</span>
-              <div class="drop-down" aria-hidden="true">
-                <div class="drop-down__scroll-aria" data-simplebar">
-                  <ul class="drop-down__list">
-                    <li class="drop-down__item drop-down__item_karra">
-                      <a href="#" class="drop-down__link">Карра</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_pratella">
-                      <a href="#" class="drop-down__link">Прателла</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_severiny">
-                      <a href="#" class="drop-down__link">Северини</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_balla">
-                      <a href="#" class="drop-down__link">Балла</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_balla">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_balla">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_balla">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                    <li class="drop-down__item drop-down__item_balla">
-                      <a href="#" class="drop-down__link">Кто-то ещё</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <form class="header__search-desk">
-            <button class="header__submit-desk" aria-label="кнопка поиска"></button>
-            <input class="header__search-text-desk" type="text" name="search-text" aria-label="поле для ввода поискового запроса" placeholder="Поиск по сайту">
-          </form>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
-        <p class="hero__descr">
-          Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений
-        </p>
-        <a class="hero__link" href="#">Подписаться на рассылку</a>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+          <p class="hero__descr">
+            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений
+          </p>
+          <a class="hero__link" href="#">Подписаться на рассылку</a>
+        </div>
+      </section>
+
+      <!-- swiper -->
+      <div class="swiper hero__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="hero__slide hero__slide-one"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__slide hero__slide-two"></div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__slide hero__slide-three"></div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- swiper -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="hero__slide hero__slide-one"></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hero__slide hero__slide-two"></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="hero__slide hero__slide-three"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-
 
     <section class="about-us">
       <div class="container">
@@ -271,14 +269,56 @@
       </div>
     </section>
 
+    <section class="gallery">
+      <div class="container gallery__container">
+        <div class="gallery__select-block">
+          <h2 class="gallery__title">Галерея</h2>
+          <label class="gallery__label-select">
+            <span class="gallery__select-descr">Фильтр:</span>
+            <select class="gallery__select-input" name="select">
+              <option value="Живопись">Живопись</option>
+              <option value="Рисунок">Рисунок</option>
+              <option value="Скульптура">Скульптура</option>
+            </select>
+          </label>
+          <div class="gallery__check-block">
+            <label class="gallery__label-check">
+              <input class="gallery__checkbox visually-hidden" type="checkbox">
+              <span class="gallery__checkbox-text">XIX век</span>
+            </label>
+            <label class="gallery__label-check">
+              <input class="gallery__checkbox visually-hidden" type="checkbox">
+              <span class="gallery__checkbox-text">XX век</span>
+            </label>
+            <label class="gallery__label-check">
+              <input class="gallery__checkbox visually-hidden" type="checkbox">
+              <span class="gallery__checkbox-text">Современность</span>
+            </label>
+          </div>
+        </div>
+        <div class="gallery__slider-block">
+          <div class="swiper gallery__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="js/main.min.js"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
