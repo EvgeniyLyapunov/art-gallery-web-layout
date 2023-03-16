@@ -1,7 +1,9 @@
 .gallery {
+  padding-bottom: 80px;
   background: url('../../../image/backgrounds/gallery-bg-xl.jpg') center / cover no-repeat;
   &__container {
     display: flex;
+    height: 100%;
   }
   &__select-block {
     display: flex;
@@ -9,7 +11,7 @@
     justify-content: start;
     align-items: flex-start;
     width: 450px;
-    padding: 80px 0;
+    padding-top: 80px;;
   }
   &__title {
     margin-bottom: 16px;
@@ -69,48 +71,57 @@
     background: url('../../../image/icons/gallery/checked.svg') left center / 12px no-repeat;
   }
   &__slider-block {
+    position: relative;
     width: 1150px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__swiper {
+    height: 350px;
+    &-slide {
+      display: flex;
+      justify-content: space-between;
+      &-part {
+        display: block;
+        width: 350px;
+        height: 350px;
+      }
+      &-img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+      }
+    }
   }
 }
 
-.choices__inner {
-  width: 400px;
-  height: 40px;
-  padding-left: 16px;
-  font-size: 16px;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  background-color: transparent;
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+  left: 100px;
+  top: 140px;
+  background: url('../../../image/icons/gallery/slide-to-right.svg') center / 30px 30px no-repeat;
 }
 
-.choices__list--dropdown, .choices__list[aria-expanded] {
-  font-size: 16px;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 6px;
-  background-color: transparent;
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 140px;
+  background: url('../../../image/icons/gallery/slide-to-left.svg') center / 30px 30px no-repeat;
 }
 
-.choices__item .choices__item--choice .choices__item--selectable .is-selected .is-highlighted {
-  color: #fff;
-  background-color: transparent;
+.swiper-button-next:after {
+  content: '';
+}  
+
+.swiper-button-prev:after {
+  content: '';
 }
 
-.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+.swiper-pagination {
   color: #fff;
-  background-color: transparent;
+  left: 54px;
+  top: 125px;
 }
 
-.choices[data-type*=select-one]::after {
-  border-style: solid;
-  border-color: #fff;
-  height: 8px;
-  width: 8px;
-  border-width: 2px;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  transform: rotate(315deg);
-  right: 22px;
-  top: 46%
-}
