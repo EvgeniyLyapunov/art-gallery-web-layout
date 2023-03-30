@@ -8,16 +8,18 @@
     font-weight: 700;
     font-size: 72px;
     line-height: 100px;
+    letter-spacing: 2px;
     color: #fff;
   }
   &__descr {
-    max-width: 597px;
+    max-width: 596px;
     margin: 0;
     margin-top: -5px;
     margin-bottom: 91px;
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
+    word-spacing: 0.19em;
     color: #fff;
   }
   &__link {
@@ -30,12 +32,13 @@
     font-size: 18px;
     line-height: 25px;
     color: #fff;
+    word-spacing: 0.19em;
     background-color: $state-semi-dark;
     border: none;
     border-radius: 100px;
     z-index: 2;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -4px;
       right: -4px;
@@ -46,9 +49,22 @@
       z-index: 1;
       opacity: 0;
     }
-    &:hover {
-      padding: 20px 32px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       border: 3px solid $state-light;
+      border-radius: 100px;
+      z-index: 1;
+      opacity: 0;
+    }
+    &:hover::after {
+      opacity: 1;
+      // padding: 20px 32px;
+      // border: 3px solid $state-light;
     }
     &:focus::before {
       opacity: 1;
@@ -73,13 +89,13 @@
     background-position: center;
     background-size: cover;
     &-one {
-      background-image: url("../../../image/backgrounds/hero-main-bg__xl.jpg");
+      background-image: url('../../../image/backgrounds/hero-main-bg__xl.jpg');
     }
     &-two {
-      background-image: url("../../../image/backgrounds/hero-second-bg__xl.jpg");
+      background-image: url('../../../image/backgrounds/hero-second-bg__xl.jpg');
     }
     &-three {
-      background-image: url("../../../image/backgrounds/hero-third-bg__xl.jpg");
+      background-image: url('../../../image/backgrounds/hero-third-bg__xl.jpg');
     }
   }
   &__swiper {

@@ -1,0 +1,99 @@
+.gallery-modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.4s opacity ease-in-out;
+  opacity: 0;
+  &__content {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    background: #fff;
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
+    font-size: 0;
+  }
+  &__img-block {
+    display: block;
+    width: 400px;
+    height: 500px;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__descr-block {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    padding: 121px 50px 121px 48px;
+    padding-top: 121px;
+    padding-left: 48px;
+    padding-right: 50px;
+    &-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      border: none;
+      background-color: #fff;
+      background-image: url('../../../image/icons/gallery/close-modal.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      transition: 0.3s background-image ease-in-out;
+      &:hover {
+        background-image: url('../../../image/icons/gallery/close-modal-hover.svg');
+      }
+      &:focus {
+        outline: none;
+        background-image: url('../../../image/icons/gallery/close-modal-hover.svg');
+      }
+      &:active {
+        background-image: url('../../../image/icons/gallery/close-modal-active.svg');
+      }
+    }
+    &-author {
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #333;
+    }
+    &-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #333;
+    }
+    &-date {
+      display: block;
+      margin-bottom: 39px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
+    }
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #333;
+    }
+  }
+  &_active-display {
+    display: flex;
+  }
+  &_active-opacity {
+    opacity: 1;
+  }
+}
