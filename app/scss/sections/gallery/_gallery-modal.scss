@@ -13,7 +13,7 @@
   opacity: 0;
   &__content {
     width: 900px;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     background: #fff;
     box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
@@ -22,7 +22,7 @@
   &__img-block {
     display: block;
     width: 400px;
-    height: 500px;
+    min-height: 500px;
   }
   &__img {
     height: 100%;
@@ -32,11 +32,8 @@
   &__descr-block {
     position: relative;
     width: 500px;
-    height: 500px;
+    min-height: 500px;
     padding: 121px 50px 121px 48px;
-    padding-top: 121px;
-    padding-left: 48px;
-    padding-right: 50px;
     &-close {
       position: absolute;
       top: 20px;

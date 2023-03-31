@@ -12,6 +12,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // подключаем свайпер в Галерею
   const gallerySwiper = new Swiper('.gallery__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    breakpoints: {
+      321: {
+        slidesPerView: 2,
+        spaceBetween: 38,
+        slidesPerGroup: 2,
+      },
+      993: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+      },
+      1241: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        slidesPerGroup: 2,
+      },
+      1641: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerGroup: 3,
+      },
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',

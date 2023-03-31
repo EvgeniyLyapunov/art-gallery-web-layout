@@ -1,0 +1,34 @@
+@media (max-width: 1240px) {
+  .gallery-modal {
+    &__content {
+      width: 594px;
+      min-height: 594px;
+    }
+    &__img-block {
+      width: 264px;
+      min-height: 594px;
+    }
+    &__descr-block {
+      width: 330px;
+      min-height: 594px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery-modal {
+    &__content {
+      width: 668px;
+      min-height: 594px;
+    }
+    &__img-block {
+      width: 301px;
+      min-height: 594px;
+    }
+    &__descr-block {
+      width: 367px;
+      min-height: 594px;
+      padding: 121px 36px 121px 50px;
+    }
+  }
+}
