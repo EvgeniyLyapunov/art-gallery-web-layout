@@ -79,3 +79,9 @@
     background-color: #000;
   }
 }
+
+@media (max-width: 576px) {
+  .choices__inner {
+    width: 290px;
+  }
+}

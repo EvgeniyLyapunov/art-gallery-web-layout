@@ -32,3 +32,44 @@
     }
   }
 }
+
+@media (max-width: 700px) {
+  .gallery-modal {
+    &__content {
+      width: 540px;
+      height: 540px;
+    }
+    &__img-block {
+      width: 240px;
+      height: 540px;
+    }
+    &__descr-block {
+      width: 300px;
+      height: 540px;
+      padding: 100px 20px 60px 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-modal {
+    &__content {
+      flex-direction: column;
+      width: 290px;
+      min-height: 600px;
+    }
+    &__img-block {
+      width: 290px;
+      min-height: 200px;
+    }
+    &__descr-block {
+      width: 290px;
+      min-height: 400px;
+      padding: 17px 21px;
+      &-close {
+        top: -180px;
+        background-color: transparent;
+      }
+    }
+  }
+}
