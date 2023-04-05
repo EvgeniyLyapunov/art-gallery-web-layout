@@ -1,0 +1,189 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &__descr {
+    max-width: 1080px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333;
+  }
+  &__content {
+    display: flex;
+  }
+  &__show {
+    width: 750px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    &-picture {
+      width: 100%;
+      height: 470px;
+      margin-bottom: 30px;
+      &-img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-name {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #333;
+    }
+    &-lifedate {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #999;
+    }
+    &-descr {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #333;
+    }
+  }
+  &__select {
+    width: 800px;
+    &-item {
+      &:first-child {
+        border-top: 1px solid #cacaca;
+      }
+      margin-top: -1px;
+      padding-top: 41px;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid #cacaca;
+      transition: border-color 0.3s ease;
+      &:focus {
+        border-color: #cacaca;
+        outline: none;
+      }
+      &:hover {
+        border-color: $state-semi-dark;
+      }
+      &-heading {
+        margin-bottom: 41px;
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333;
+        transition: 0.3s color ease-in-out;
+        cursor: pointer;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      &-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 50px;
+        height: 50px;
+        background: url('../../../image/icons/catalog/catalog-item-btn-close.svg')
+          center / contain no-repeat;
+        transition: 0.3s background ease-in-out;
+      }
+      &-content {
+        max-height: 338px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-top: 1px solid #cacaca;
+      }
+      &-list {
+        max-height: 313px;
+        display: flex;
+        flex-flow: column wrap;
+      }
+      &-artist {
+        max-width: 200px;
+      }
+      &-link {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333;
+        transition: 0.3s background-color ease-in-out;
+        &:focus {
+          background-color: $state-semi-dark;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: -3px;
+          right: 0;
+          width: 100%;
+          height: 1px;
+          background-color: transparent;
+          transition: 0.3s background-color ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+// hover
+.catalog__select-item:hover .catalog__select-item-heading {
+  color: $state-semi-dark;
+}
+
+.catalog__select-item:hover
+  .catalog__select-item-heading
+  .catalog__select-item-icon {
+  background: url('../../../image/icons/catalog/catalog-item-btn-close-hover.svg')
+    center / contain no-repeat;
+}
+
+.catalog__select-item:hover .catalog__select-item-content {
+  border-color: $state-semi-dark;
+}
+
+.catalog__select-item-artist:hover .catalog__select-item-link::after {
+  background-color: $state-semi-dark;
+}
+
+// focus
+.catalog__select-item:focus {
+  border-color: #cacaca;
+  outline: none;
+}
+
+.catalog__select-item:focus .catalog__select-item-heading {
+  outline: none;
+}
+
+.catalog__select-item:focus .catalog__select-item-heading span {
+  transition: 0.3s all ease-in-out;
+  color: #fff;
+  background-color: $state-semi-dark;
+}
+
+.catalog__select-item:focus
+  .catalog__select-item-heading
+  .catalog__select-item-icon {
+  background: url('../../../image/icons/catalog/catalog-item-btn-close-hover.svg')
+    center / contain no-repeat;
+}
+
+.catalog__select-item:focus .catalog__select-item-content {
+  border-color: #cacaca;
+  outline: none;
+}
+
+// active
+.catalog__select-item-heading.ui-accordion-header-active
+  .catalog__select-item-icon {
+  background: url('../../../image/icons/catalog/catalog-item-btn-open.svg')
+    center / contain no-repeat;
+}
+
+.catalog__select-item-heading.ui-accordion-header-active {
+  color: $state-dark;
+}

@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -6,7 +8,10 @@ body {
   font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
@@ -52,6 +57,14 @@ a:focus {
   align-items: center;
 }
 
+.title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: #333;
+}
+
 .promo {
   position: relative;
 }
@@ -87,5 +100,11 @@ a:focus {
   .container {
     width: 100%;
     padding: 0 15px;
+  }
+
+  .title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
   }
 }

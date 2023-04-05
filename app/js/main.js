@@ -180,4 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 400);
     });
   });
+
+  $('.js-accordion').accordion({
+    collapsible: true,
+    active: false,
+    icons: false,
+    heightStyle: 'catalog__select-item-content',
+  });
 });
