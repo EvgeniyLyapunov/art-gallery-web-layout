@@ -3,7 +3,7 @@
   padding-bottom: 80px;
   &__descr {
     max-width: 1080px;
-    margin-bottom: 50px;
+    margin-bottom: 39px;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
@@ -20,14 +20,14 @@
     &-picture {
       width: 100%;
       height: 470px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       &-img {
         width: 100%;
         object-fit: cover;
       }
     }
     &-name {
-      margin-bottom: 15px;
+      margin-bottom: 6px;
       font-weight: 600;
       font-size: 24px;
       line-height: 33px;
@@ -46,6 +46,36 @@
       font-size: 16px;
       line-height: 32px;
       color: #333;
+    }
+    &_hidden {
+      display: none;
+    }
+    &-empty {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+      &-picture {
+        width: 750px;
+        height: 470px;
+        margin-bottom: 30px;
+      }
+      &-name {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #333;
+      }
+      &-text {
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333;
+      }
+      &_hidden {
+        display: none;
+      }
     }
   }
   &__select {
@@ -91,18 +121,54 @@
         transition: 0.3s background ease-in-out;
       }
       &-content {
+        display: flex;
+        align-items: center;
         max-height: 338px;
         padding-top: 25px;
         padding-bottom: 25px;
         border-top: 1px solid #cacaca;
       }
+      &-empty {
+        width: 275px;
+        height: 189px;
+        margin-right: 24px;
+        margin-bottom: 5px;
+        background-color: #999;
+        outline: 12px solid #fff;
+        outline-offset: -14px;
+      }
+      &-descr {
+        &-title {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #333;
+        }
+        &-text {
+          display: block;
+          max-width: 275px;
+          margin-bottom: 5px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: #333;
+        }
+        &-link {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: $state-semi-dark;
+        }
+      }
       &-list {
+        width: 730px;
         max-height: 313px;
         display: flex;
         flex-flow: column wrap;
       }
       &-artist {
         max-width: 200px;
+        cursor: pointer;
       }
       &-link {
         position: relative;

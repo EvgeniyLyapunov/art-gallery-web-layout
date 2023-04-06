@@ -187,4 +187,54 @@ document.addEventListener('DOMContentLoaded', () => {
     icons: false,
     heightStyle: 'catalog__select-item-content',
   });
+
+  const articlesShow = document.querySelectorAll('.catalog__show');
+  const emptyShow = document.querySelector('.catalog__show-empty');
+  const artistLinks = document.querySelectorAll('.catalog__select-item-artist');
+  const catalogLinks = document.querySelectorAll(
+    '.catalog__select-item-descr-link'
+  );
+
+  document
+    .querySelector('.catalog__show')
+    .classList.remove('catalog__show_hidden');
+
+  artistLinks.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      if (e.currentTarget.getAttribute('data-artist') === 'empty') {
+        articlesShow.forEach((item) => {
+          item.classList.add('catalog__show_hidden');
+        });
+        emptyShow.classList.remove('catalog__show-empty_hidden');
+      } else {
+        emptyShow.classList.add('catalog__show-empty_hidden');
+        articlesShow.forEach((item) => {
+          if (
+            e.currentTarget.getAttribute('data-artist') ===
+            item.getAttribute('data-artist')
+          ) {
+            item.classList.remove('catalog__show_hidden');
+          } else {
+            item.classList.add('catalog__show_hidden');
+          }
+        });
+      }
+    });
+  });
+
+  catalogLinks.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      $('.js-accordion').accordion('destroy');
+      $('.js-accordion').accordion({
+        collapsible: true,
+        active: false,
+        icons: false,
+        heightStyle: 'catalog__select-item-content',
+      });
+      document
+        .querySelector('.catalog__show')
+        .classList.remove('catalog__show_hidden');
+      emptyShow.classList.add('catalog__show-empty_hidden');
+    });
+  });
 });

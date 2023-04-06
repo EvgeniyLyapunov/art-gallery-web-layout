@@ -284,7 +284,7 @@
     </div>
   </section>
 
-  <section class="gallery">
+  <section class="gallery" id="section-gallery">
     <div class="container gallery__container">
       <div class="gallery__select-block">
         <h2 class="gallery__title title">Галерея</h2>
@@ -390,7 +390,7 @@
       </p>
 
       <div class="catalog__content">
-        <article class="catalog__show">
+        <article class="catalog__show catalog__show_hidden" data-artist="dominico_girlandayo">
           <picture class="catalog__show-picture">
             <source srcset="" media="(max-width: 576px)">
             <source srcset="" media="(max-width: 992px)">
@@ -408,6 +408,17 @@
           </p>
         </article>
 
+        <div class="catalog__show-empty catalog__show-empty_hidden">
+          <div class="catalog__show-empty-picture">
+            <img class="catalog__show-picture-img" src="image/catalog/unknown.svg" alt="пустая картина">
+          </div>
+          <h4 class="catalog__show-empty-name">Что мы о нём знаем?</h4>
+          <span class="catalog__show-empty-text">
+            Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
+          </span>
+          <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+        </div>
+
         <div class="catalog__select">
           <ul class="catalog__select-list js-accordion">
             <li class="catalog__select-item" tabindex="0">
@@ -417,54 +428,77 @@
               </h3>
               <div class="catalog__select-item-content">
                 <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бергоньоне,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Бенедетто ди Биндо</a></li>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Бергоньоне,
                       Амброджо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Биссоло,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Биссоло,
                       Франческо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Больтраффио,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Больтраффио,
                       Джованни</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бонсиньори,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Бонсиньори,
                       Франческо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Боттичини,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Боттичини,
                       Рафаэлло</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Брамантино</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Брамантино</a>
                   </li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бреа,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Бреа,
                       Людовико</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бьяджо
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Бьяджо
                       д’Антонио
                       Туччи</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Веккьетта</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Веккьетта</a>
                   </li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Андреа
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Андреа
                       Верроккьо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Доменико
+                  <li class="catalog__select-item-artist" data-artist="dominico_girlandayo"><a
+                      class="catalog__select-item-link" href="#0">Доменико
                       Гирландайо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Беноццо
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Беноццо
                       Гоццоли</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Граначчи,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Граначчи,
                       Франческо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Грегорио
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Грегорио
                       ди Чекко</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Джованни
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Джованни
                       да Удине</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Джованни
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Джованни
                       ди Паоло</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Джорджоне</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Джорджоне</a>
                   </li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Парентино,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Парентино,
                       Бернардо</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Пезеллино</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Пезеллино</a>
                   </li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Пьетро
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Пьетро
                       Перуджино</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Перуцци,
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Перуцци,
                       Бальдассаре</a></li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Пизанелло</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Пизанелло</a>
                   </li>
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Пинтуриккьо</a>
+                  <li class="catalog__select-item-artist" data-artist="empty"><a class="catalog__select-item-link"
+                      href="#0">Пинтуриккьо</a>
                   </li>
                 </ul>
               </div>
@@ -475,10 +509,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
             <li class="catalog__select-item" tabindex="0">
@@ -487,10 +524,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
             <li class="catalog__select-item" tabindex="0">
@@ -499,10 +539,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
             <li class="catalog__select-item" tabindex="0">
@@ -511,10 +554,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
             <li class="catalog__select-item" tabindex="0">
@@ -523,10 +569,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
             <li class="catalog__select-item" tabindex="0">
@@ -535,10 +584,13 @@
                 <span class="catalog__select-item-icon"></span>
               </h3>
               <div class="catalog__select-item-content">
-                <ul class="catalog__select-item-list">
-                  <li class="catalog__select-item-artist"><a class="catalog__select-item-link" href="#0">Бенедетто
-                      ди Биндо</a></li>
-                </ul>
+                <div class="catalog__select-item-empty"></div>
+                <div class="catalog__select-item-descr">
+                  <h4 class="catalog__select-item-descr-title">Здесь пока пусто</h4>
+                  <span class="catalog__select-item-descr-text">А в галерее вы всегда можете найти что-то интересное
+                    для себя</span>
+                  <a class="catalog__select-item-descr-link" href="#section-gallery">В галерею</a>
+                </div>
               </div>
             </li>
           </ul>
