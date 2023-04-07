@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.gallery-modal__descr-block-close'
   );
 
+  // открытие модального окна в галерее
   galeryItems.forEach((item) =>
     item.addEventListener('click', () => {
       galleryModal.classList.add('gallery-modal_active-display');
@@ -172,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   );
 
+  // закрытие модального окна в галерее
   galleryModalCloseBtns.forEach((item) => {
     item.addEventListener('click', () => {
       galleryModal.classList.remove('gallery-modal_active-opacity');
@@ -181,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // подключение аккордиона в каталоге
   $('.js-accordion').accordion({
     collapsible: true,
     active: false,
@@ -188,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     heightStyle: 'catalog__select-item-content',
   });
 
+  const startedElem = document.querySelector('.catalog__show');
   const articlesShow = document.querySelectorAll('.catalog__show');
   const emptyShow = document.querySelector('.catalog__show-empty');
   const artistLinks = document.querySelectorAll('.catalog__select-item-artist');
@@ -195,10 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '.catalog__select-item-descr-link'
   );
 
-  document
-    .querySelector('.catalog__show')
-    .classList.remove('catalog__show_hidden');
+  // статья в каталоге по умолчанию(стартовая)
+  startedElem.classList.remove('catalog__show_hidden');
 
+  // переход с имени художника на статью о нём
+  // или на заглушку, если статья отсутствует
   artistLinks.forEach((item) => {
     item.addEventListener('click', (e) => {
       if (e.currentTarget.getAttribute('data-artist') === 'empty') {
@@ -206,14 +211,17 @@ document.addEventListener('DOMContentLoaded', () => {
           item.classList.add('catalog__show_hidden');
         });
         emptyShow.classList.remove('catalog__show-empty_hidden');
+        emptyShow.scrollIntoView();
       } else {
         emptyShow.classList.add('catalog__show-empty_hidden');
+
         articlesShow.forEach((item) => {
           if (
             e.currentTarget.getAttribute('data-artist') ===
             item.getAttribute('data-artist')
           ) {
             item.classList.remove('catalog__show_hidden');
+            item.scrollIntoView();
           } else {
             item.classList.add('catalog__show_hidden');
           }
@@ -222,6 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // закрытие аккордиона при переходе в галерею по ссылкам из каталога
   catalogLinks.forEach((item) => {
     item.addEventListener('click', (e) => {
       $('.js-accordion').accordion('destroy');
