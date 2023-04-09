@@ -1,0 +1,126 @@
+.events {
+  padding-bottom: 80px;
+  &__container {
+    position: relative;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    &-pictures {
+      width: 500px;
+      height: 300px;
+      &-img {
+        width: 500px;
+        object-fit: cover;
+      }
+    }
+    &-info {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      padding: 13px 50px 40px 50px;
+      border: 1px solid #cacaca;
+      border-top: none;
+      &-place,
+      &-date {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: #999;
+      }
+      &-date {
+        margin-bottom: 15px;
+      }
+      &-title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #333;
+      }
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333;
+      }
+      &-link {
+        position: relative;
+        width: 88px;
+        display: inline-block;
+        margin-top: auto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: $state-semi-dark;
+        transition: 0.3s color ease-in-out;
+        &:focus {
+          color: #fff;
+        }
+        &:hover {
+          color: $state-dark;
+        }
+        &:active {
+          color: #333;
+        }
+        &::before {
+          position: absolute;
+          content: '';
+          top: -4px;
+          bottom: -4px;
+          right: -4px;
+          left: -4px;
+          background-color: transparent;
+          transition: 0.3s background-color ease-in-out;
+          z-index: -1;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: 1px;
+          right: 1px;
+          width: 100%;
+          height: 1px;
+          transition: 0.3s background-color ease-in-out;
+          background-color: $state-semi-dark;
+        }
+        &:focus::after {
+          background-color: #fff;
+        }
+        &:hover::after {
+          background-color: $state-dark;
+        }
+        &:active::after {
+          background-color: #333;
+        }
+        &:focus::before {
+          background-color: $state-semi-dark;
+        }
+      }
+    }
+  }
+  &__swiper-button-next {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    right: -25px;
+    bottom: 324px;
+    background: url('../../../image/icons/events/next.svg') center / 50px 50px
+      no-repeat;
+  }
+  &__swiper-button-prev {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    left: -25px;
+    bottom: 324px;
+    background: url('../../../image/icons/events/prev.svg') center / 50px 50px
+      no-repeat;
+  }
+  &__swiper-pagination {
+    display: none;
+  }
+}

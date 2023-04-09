@@ -51,6 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // подключаем свайпер в События
+  const eventsSwiper = new Swiper('.events__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      1641: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+    pagination: {
+      el: '.events__swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.events__swiper-button-next',
+      prevEl: '.events__swiper-button-prev',
+    },
+  });
+
   // Drop down
   const catalogSections = document.querySelectorAll('.header__catalog-section');
 
