@@ -6,19 +6,20 @@
   &__slide {
     display: flex;
     flex-direction: column;
+    width: calc((100% - 100px) / 3);
     &-pictures {
-      width: 500px;
-      height: 300px;
+      width: 100%;
       &-img {
-        width: 500px;
+        width: 100%;
         object-fit: cover;
       }
     }
     &-info {
-      height: 400px;
+      margin-top: -3px;
+      min-height: 400px;
       display: flex;
       flex-direction: column;
-      padding: 13px 50px 40px 50px;
+      padding: 13px 50px 47px 50px;
       border: 1px solid #cacaca;
       border-top: none;
       &-place,
@@ -52,7 +53,7 @@
         margin-top: auto;
         font-weight: 400;
         font-size: 16px;
-        line-height: 32px;
+        line-height: 16px;
         color: $state-semi-dark;
         transition: 0.3s color ease-in-out;
         &:focus {
@@ -78,7 +79,7 @@
         &::after {
           position: absolute;
           content: '';
-          bottom: 1px;
+          bottom: -5px;
           right: 1px;
           width: 100%;
           height: 1px;
@@ -109,6 +110,21 @@
     bottom: 324px;
     background: url('../../../image/icons/events/next.svg') center / 50px 50px
       no-repeat;
+    transition: 0.3s background ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: url('../../../image/icons/events/next-hover.svg') center /
+        50px 50px no-repeat;
+    }
+    &:active {
+      border: 2px solid $state-dark;
+      border-radius: 50%;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $state-dark;
+      border-radius: 50%;
+    }
   }
   &__swiper-button-prev {
     position: absolute;
@@ -119,6 +135,21 @@
     bottom: 324px;
     background: url('../../../image/icons/events/prev.svg') center / 50px 50px
       no-repeat;
+    transition: 0.3s background ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: url('../../../image/icons/events/prev-hover.svg') center /
+        50px 50px no-repeat;
+    }
+    &:active {
+      border: 2px solid $state-dark;
+      border-radius: 50%;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $state-dark;
+      border-radius: 50%;
+    }
   }
   &__swiper-pagination {
     display: none;

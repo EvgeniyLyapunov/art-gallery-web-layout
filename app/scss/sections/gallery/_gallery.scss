@@ -144,6 +144,15 @@
   top: 127px;
   background: url('../../../image/icons/gallery/slide-to-right.svg') center /
     30px 30px no-repeat;
+  transition: 0.3s background ease-in-out;
+  &:hover {
+    background: url('../../../image/icons/gallery/slide-to-right-hover.svg')
+      center / 30px 30px no-repeat;
+  }
+  &:active {
+    background: url('../../../image/icons/gallery/slide-to-right-active.svg')
+      center / 30px 30px no-repeat;
+  }
 }
 
 .swiper-button-prev {
@@ -153,6 +162,15 @@
   top: 127px;
   background: url('../../../image/icons/gallery/slide-to-left.svg') center /
     30px 30px no-repeat;
+  transition: 0.3s background ease-in-out;
+  &:hover {
+    background: url('../../../image/icons/gallery/slide-to-left-hover.svg')
+      center / 30px 30px no-repeat;
+  }
+  &:active {
+    background: url('../../../image/icons/gallery/slide-to-left-active.svg')
+      center / 30px 30px no-repeat;
+  }
 }
 
 .swiper-button-next:after {

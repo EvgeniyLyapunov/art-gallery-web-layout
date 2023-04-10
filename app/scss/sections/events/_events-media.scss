@@ -1,0 +1,87 @@
+@media (max-width: 1240px) {
+  .events {
+    &__slide {
+      width: calc((100% - 54px) / 3);
+      &-info {
+        min-height: 483px;
+        padding: 13px 34px 56px 34px;
+        &-place,
+        &-date {
+          text-align: right;
+        }
+        &-date {
+          margin-bottom: 5px;
+        }
+        &-title {
+          margin-bottom: 6px;
+        }
+      }
+    }
+    &__swiper-button-next,
+    &__swiper-button-prev {
+      display: none;
+    }
+    &__swiper-pagination {
+      display: block;
+      margin-top: 22px;
+      text-align: center;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #666;
+  }
+}
+
+@media (max-width: 992px) {
+  .events {
+    &__slide {
+      &-info {
+        &-place,
+        &-date {
+          margin-right: -18px;
+        }
+      }
+    }
+    &__swiper-pagination {
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .events {
+    &__slide {
+      width: 100%;
+      &-pictures {
+        height: 200px;
+        &-img {
+          height: 200px;
+        }
+      }
+      &-info {
+        min-height: 486px;
+        padding: 20px 31px 56px 22px;
+        &-date {
+          margin-bottom: 10px;
+        }
+        &-link {
+          margin-left: 6px;
+        }
+      }
+    }
+    &__swiper-pagination {
+      margin-top: 4px;
+    }
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 8px;
+  }
+}
