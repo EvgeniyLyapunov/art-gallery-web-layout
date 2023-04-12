@@ -1,0 +1,186 @@
+.projects {
+  padding-bottom: 80px;
+  &__descr {
+    max-width: 1080px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+  }
+  &__tippy {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../../../image/icons/projects/info.svg') center / cover
+      no-repeat;
+    transition: 0.3s background ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background: url('../../../image/icons/projects/info-hover.svg') center /
+        cover no-repeat;
+    }
+    &:active {
+      background: url('../../../image/icons/projects/info-active.svg') center /
+        cover no-repeat;
+    }
+  }
+  &__link {
+    position: relative;
+    color: $state-semi-dark;
+    transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      content: '';
+      top: -4px;
+      right: -4px;
+      bottom: -4px;
+      left: -4px;
+      background-color: transparent;
+      transition: 0.3s background-color ease-in-out;
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      bottom: -4px;
+      left: 0;
+      background-color: transparent;
+      transition: 0.3s background-color ease-in-out;
+    }
+    &:focus {
+      color: #fff;
+    }
+    &:focus::before {
+      background-color: $state-semi-dark;
+    }
+    &:active {
+      color: $state-dark;
+    }
+    &:active::after {
+      background-color: $state-dark;
+    }
+    &:active::before {
+      background-color: transparent;
+    }
+    &:hover::after {
+      background-color: $state-dark;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 23px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+  }
+  &__swiper {
+    width: calc(100% - 250px);
+    height: 150px;
+    &-slide {
+      position: relative;
+      width: calc((100% - 100px) / 3);
+      height: 100%;
+    }
+    &-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #cacaca;
+      transition: 0.3s background ease-in-out, 0.3s border ease-in-out;
+      cursor: pointer;
+      &:focus {
+        border: 1px solid $state-semi-dark;
+      }
+      &:active {
+        border: 1px solid $state-semi-dark;
+      }
+      &_1 {
+        background: url('../../../image/projects/img-1.svg') center / cover
+          no-repeat;
+      }
+      &_1:hover,
+      &_1:active {
+        background: url('../../../image/projects/img-1-color.svg') center /
+          cover no-repeat;
+      }
+      &_2 {
+        background: url('../../../image/projects/img-2.svg') center / cover
+          no-repeat;
+      }
+      &_2:hover,
+      &_2:active {
+        background: url('../../../image/projects/img-2-color.svg') center /
+          cover no-repeat;
+      }
+      &_3 {
+        background: url('../../../image/projects/img-3.svg') center / cover
+          no-repeat;
+      }
+      &_3:hover,
+      &_3:active {
+        background: url('../../../image/projects/img-3-color.svg') center /
+          cover no-repeat;
+      }
+      &_4 {
+        background: url('../../../image/projects/img-4.svg') center / cover
+          no-repeat;
+      }
+      &_4:hover,
+      &_4:active {
+        background: url('../../../image/projects/img-4-color.svg') center /
+          cover no-repeat;
+      }
+      &_5 {
+        background: url('../../../image/projects/img-5.svg') center / cover
+          no-repeat;
+      }
+      &_5:hover,
+      &_5:active {
+        background: url('../../../image/projects/img-5-color.svg') center /
+          cover no-repeat;
+      }
+      &_6 {
+        background: url('../../../image/projects/img-6.svg') center / cover
+          no-repeat;
+      }
+      &_6:hover,
+      &_6:active {
+        background: url('../../../image/projects/img-6-color.svg') center /
+          cover no-repeat;
+      }
+      &_7 {
+        background: url('../../../image/projects/img-7.svg') center / cover
+          no-repeat;
+      }
+      &_7:hover,
+      &_7:active {
+        background: url('../../../image/projects/img-7-color.svg') center /
+          cover no-repeat;
+      }
+      &_8 {
+        background: url('../../../image/projects/img-8.svg') center / cover
+          no-repeat;
+      }
+      &_8:hover,
+      &_8:active {
+        background: url('../../../image/projects/img-8-color.svg') center /
+          cover no-repeat;
+      }
+      &_9 {
+        background: url('../../../image/projects/img-9.svg') center / cover
+          no-repeat;
+      }
+      &_9:hover,
+      &_9:active {
+        background: url('../../../image/projects/img-9-color.svg') center /
+          cover no-repeat;
+      }
+    }
+  }
+}
