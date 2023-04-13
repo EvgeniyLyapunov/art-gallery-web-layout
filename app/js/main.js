@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  // подключаем свайпер в События
+  // подключаем свайпер в Проекты
   const projectsSwiper = new Swiper('.projects__swiper', {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 50,
     breakpoints: {
       319: {
         slidesPerView: 1,
@@ -101,12 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 34,
       },
       993: {
-        slidesPerView: 3,
-        spaceBetween: 27,
+        slidesPerView: 2,
+        spaceBetween: 50,
       },
       1241: {
-        slidesPerView: 3,
-        spaceBetween: 27,
+        slidesPerView: 2,
+        spaceBetween: 50,
       },
       1641: {
         slidesPerView: 3,

@@ -1,8 +1,11 @@
 .projects {
+  &__container {
+    position: relative;
+  }
   padding-bottom: 80px;
   &__descr {
     max-width: 1080px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
@@ -80,7 +83,7 @@
     color: #333333;
   }
   &__swiper {
-    width: calc(100% - 250px);
+    width: calc(100% - 150px);
     height: 150px;
     &-slide {
       position: relative;
@@ -182,5 +185,83 @@
           cover no-repeat;
       }
     }
+    &-button-prev {
+      position: absolute;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      bottom: 60px;
+      background: url('../../../image/icons/projects/prev.svg') center / 30px
+        30px no-repeat;
+      transition: 0.3s background ease-in-out;
+      cursor: pointer;
+      &.swiper-button-disabled,
+      &.swiper-button-disabled:focus,
+      &.swiper-button-disabled:hover {
+        background: url('../../../image/icons/projects/prev-disabled.svg')
+          center / 30px 30px no-repeat;
+        border: none;
+        border-radius: unset;
+        cursor: auto;
+      }
+      &:focus {
+        outline: none;
+        border: 2px solid $state-dark;
+        border-radius: 50%;
+      }
+      &:hover {
+        background: url('../../../image/icons/projects/prev-hover.svg') center /
+          30px 30px no-repeat;
+      }
+      &:active {
+        background: url('../../../image/icons/projects/prev-hover.svg') center /
+          30px 30px no-repeat;
+        border: 2px solid $state-dark;
+        border-radius: 50%;
+      }
+    }
+    &-button-next {
+      position: absolute;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+      right: 0;
+      bottom: 51px;
+      background: url('../../../image/icons/projects/next.svg') center / 30px
+        30px no-repeat;
+      transition: 0.3s background ease-in-out;
+      cursor: pointer;
+      &.swiper-button-disabled,
+      &.swiper-button-disabled:hover,
+      &.swiper-button-disabled:focus {
+        background: url('../../../image/icons/projects/next-disabled.svg')
+          center / 30px 30px no-repeat;
+        border: none;
+        border-radius: unset;
+        cursor: auto;
+      }
+      &:focus {
+        outline: none;
+        border: 2px solid $state-dark;
+        border-radius: 50%;
+      }
+      &:hover {
+        background: url('../../../image/icons/projects/next-hover.svg') center /
+          30px 30px no-repeat;
+      }
+      &:active {
+        background: url('../../../image/icons/projects/next-hover.svg') center /
+          30px 30px no-repeat;
+        border: 2px solid $state-dark;
+        border-radius: 50%;
+      }
+    }
   }
 }
+
+// .projects__swiper-button-prev.swiper-button-disabled {
+//   background: url('../../../image/icons/projects/prev-disabled.svg') center /
+//     30px 30px no-repeat;
+
+// }
