@@ -317,4 +317,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // tooltips in section projects
   tippy('[data-tippy-content]');
+
+  const phoneElement = document.querySelector('#form-phone');
+  const im = new Inputmask('+7(999) 999-99-99');
+  im.mask(phoneElement);
+
+  const validate = new window.JustValidate('#form', {
+    errorFieldCssClass: 'is-invalid',
+    errorFieldStyle: {
+      border: '1px solid #d11616',
+    },
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: '#d11616',
+    },
+    focusInvalidField: true,
+    lockForm: true,
+  });
+
+  validate
+    .addField('#form-name', [
+      {
+        rule: 'customRegexp',
+        value: /^[a-zа-яё]+$/i,
+        errorMessage: 'Недопустимый формат',
+      },
+      {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+      },
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Слишком короткое имя',
+      },
+      {
+        rule: 'maxLength',
+        value: 15,
+        errorMessage: 'Длина имени - максимум 15 букв',
+      },
+    ])
+    .addField('#form-phone', [
+      {
+        validator: () => {
+          const phone = phoneElement.inputmask.unmaskedvalue();
+          const result = Number(phone) && phone.length === 10;
+          return result === 0 ? false : result;
+        },
+        errorMessage: 'Вы не ввели телефон!',
+      },
+    ]);
 });

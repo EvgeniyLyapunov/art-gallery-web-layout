@@ -1,0 +1,144 @@
+.callback {
+  border: 1px solid #cacaca;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 154px;
+  }
+  &__showroom {
+    display: flex;
+    flex-direction: column;
+    &-name {
+      display: block;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333;
+    }
+    &-address {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #333;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-input {
+      width: 270px;
+      height: 50px;
+      margin-right: 20px;
+      padding-right: 24px;
+      padding-left: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #333;
+      border: 1px solid #333;
+      border-radius: 100px;
+      transition: 0.3s background-color ease-in-out;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        background-color: #ececec;
+        outline: none;
+      }
+      &-label {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &-submit {
+      min-width: 329px;
+      min-height: 50px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      color: $state-semi-dark;
+      border: 2px solid $state-semi-dark;
+      background-color: #fff;
+      border-radius: 100px;
+      transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out,
+        0.3s border ease-in-out;
+      cursor: pointer;
+      &:focus,
+      &:hover {
+        color: #fff;
+        background-color: $state-semi-dark;
+      }
+      &:active {
+        color: #fff;
+        background-color: $state-dark;
+      }
+    }
+  }
+  &__fast {
+    display: flex;
+    flex-direction: column;
+    &-name {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333;
+    }
+    &-socials {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      &-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s opacity ease-in-out, 0.3s border ease-in-out,
+          0.3s background ease-in-out;
+        &:focus,
+        &:hover {
+          opacity: 0.5;
+        }
+        &-whatsapp {
+          margin-right: 21px;
+          background: url('../../../image/icons/contacts/whatsapp-icon.svg')
+            center / cover no-repeat;
+          &:active {
+            margin-right: 22px;
+            width: 39px;
+            height: 39px;
+            opacity: 0.5;
+            border: 1px solid #333;
+            border-radius: 50%;
+          }
+        }
+        &-telegram {
+          background: url('../../../image/icons/contacts/telegram_icon.svg')
+            center / cover no-repeat;
+          &:active {
+            width: 39px;
+            height: 39px;
+            opacity: 0.5;
+            border: 1px solid #333;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-invalid {
+  border: 2px solid #d11616;
+  margin-top: 5px;
+  padding-left: 13px;
+}
+.is-label-invalid {
+  margin-top: -17px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #d11616;
+}

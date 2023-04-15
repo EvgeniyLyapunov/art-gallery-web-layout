@@ -1,5 +1,6 @@
 @media (max-width: 1240px) {
   .projects {
+    padding-bottom: 77px;
     &__swiper {
       width: calc(100% - 106px);
       height: 128px;
@@ -13,6 +14,7 @@
 
 @media (max-width: 992px) {
   .projects {
+    padding-bottom: 80px;
     &__descr {
       margin-bottom: 25px;
     }
@@ -31,6 +33,7 @@
 
 @media (max-width: 576px) {
   .projects {
+    padding-bottom: 40px;
     &__descr {
       margin-bottom: 19px;
     }
