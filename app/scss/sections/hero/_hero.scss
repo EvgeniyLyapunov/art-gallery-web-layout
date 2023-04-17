@@ -27,14 +27,14 @@
     display: block;
     width: 314px;
     height: 70px;
-    padding: 23px 35px;
+    padding: 20px 32px;
     font-weight: 700;
     font-size: 18px;
     line-height: 25px;
     color: #fff;
     word-spacing: 0.19em;
     background-color: $state-semi-dark;
-    border: none;
+    border: 3px solid transparent;
     border-radius: 100px;
     z-index: 2;
     &::before {
@@ -73,7 +73,6 @@
       opacity: 0;
     }
     &:active {
-      padding: 20px 32px;
       border: 3px solid $state-light;
       background-color: $state-dark;
     }

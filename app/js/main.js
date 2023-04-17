@@ -237,6 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
       galleryModal.classList.add('gallery-modal_active-display');
       setTimeout(() => {
         galleryModal.classList.add('gallery-modal_active-opacity');
+        document.querySelector('body').style.overflow = 'hidden';
+        if (document.documentElement.clientWidth > 500) {
+          document.querySelector('body').style.paddingRight = 22 + 'px';
+        }
       }, 10);
     })
   );
@@ -247,6 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
       galleryModal.classList.remove('gallery-modal_active-opacity');
       setTimeout(() => {
         galleryModal.classList.remove('gallery-modal_active-display');
+        document.querySelector('body').style.overflow = '';
+        document.querySelector('body').style.paddingRight = '';
       }, 400);
     });
   });
@@ -367,4 +373,26 @@ document.addEventListener('DOMContentLoaded', () => {
         errorMessage: 'Вы не ввели телефон!',
       },
     ]);
+
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map('map', {
+      center: [55.758468, 37.601088],
+      zoom: 17,
+      // controls: [],
+    });
+    myMap.behaviors.disable(['scrollZoom']).enable('ruler');
+    var myPlacemark = new ymaps.Placemark(
+      [55.758468, 37.601088],
+      {},
+      {
+        iconLayout: 'default#image',
+        iconImageHref: '../image/icons/map-mark.svg',
+        iconImageSize: [20, 20],
+        // iconImageOffset: [-23, -42],
+      }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+  }
 });

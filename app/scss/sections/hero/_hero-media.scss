@@ -1,4 +1,4 @@
-// pixel perfect on 1024px 
+// pixel perfect on 1024px
 @media (max-width: 1240px) {
   .hero {
     padding-top: 106px;
@@ -13,13 +13,13 @@
     }
     &__slide {
       &-one {
-        background-image: url("../../../image/backgrounds/hero-main-bg__lg.jpg");
+        background-image: url('../../../image/backgrounds/hero-main-bg__lg.jpg');
       }
       &-two {
-        background-image: url("../../../image/backgrounds/hero-second-bg__lg.jpg");
+        background-image: url('../../../image/backgrounds/hero-second-bg__lg.jpg');
       }
       &-three {
-        background-image: url("../../../image/backgrounds/hero-third-bg__lg.jpg");
+        background-image: url('../../../image/backgrounds/hero-third-bg__lg.jpg');
       }
     }
   }
@@ -30,13 +30,13 @@
   .hero {
     &__slide {
       &-one {
-        background-image: url("../../../image/backgrounds/hero-main-bg__md.jpg");
+        background-image: url('../../../image/backgrounds/hero-main-bg__md.jpg');
       }
       &-two {
-        background-image: url("../../../image/backgrounds/hero-second-bg__md.jpg");
+        background-image: url('../../../image/backgrounds/hero-second-bg__md.jpg');
       }
       &-three {
-        background-image: url("../../../image/backgrounds/hero-third-bg__md.jpg");
+        background-image: url('../../../image/backgrounds/hero-third-bg__md.jpg');
       }
     }
   }
@@ -60,7 +60,7 @@
     &__link {
       width: 254px;
       height: 55px;
-      padding: 16px 25px;
+      padding: 13px 22px;
       font-size: 15px;
       line-height: 22px;
       &:hover {
@@ -96,22 +96,22 @@
       width: 200px;
       height: 40px;
       margin: 0 auto;
-      padding: 11px 16px 14px 19px;
+      padding: 8px 13px 11px 19px;
       font-size: 12px;
       line-height: 16px;
       &:hover {
-        padding: 8px 13px 11px 16px;;
+        padding: 8px 13px 11px 19px;
       }
     }
     &__slide {
       &-one {
-        background-image: url("../../../image/backgrounds/hero-main-bg__sm.jpg");
+        background-image: url('../../../image/backgrounds/hero-main-bg__sm.jpg');
       }
       &-two {
-        background-image: url("../../../image/backgrounds/hero-second-bg__sm.jpg");
+        background-image: url('../../../image/backgrounds/hero-second-bg__sm.jpg');
       }
       &-three {
-        background-image: url("../../../image/backgrounds/hero-third-bg__sm.jpg");
+        background-image: url('../../../image/backgrounds/hero-third-bg__sm.jpg');
       }
     }
   }
