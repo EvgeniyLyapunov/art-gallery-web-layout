@@ -193,6 +193,8 @@
     }
     &__show {
       margin-top: -3px;
+      width: 290px;
+      margin: 0 auto;
       &-picture {
         height: 181px;
         margin-bottom: 20px;
@@ -201,9 +203,11 @@
         margin-bottom: 15px;
       }
       &-empty {
-        width: 100%;
+        width: 290px;
+        margin: 0 auto;
         &-picture {
           height: 181px;
+          width: 290px;
           margin-bottom: 20px;
         }
         &-text {

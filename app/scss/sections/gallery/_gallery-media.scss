@@ -179,18 +179,20 @@
     top: auto;
     right: 80px;
     bottom: -50px;
+    z-index: 11;
   }
 
   .swiper-button-prev {
     left: 80px;
     top: auto;
     bottom: -50px;
+    z-index: 11;
   }
 
   .swiper-pagination {
-    left: 124px;
+    left: 0px;
     top: auto;
-    width: 14%;
+    width: 100%;
     bottom: -44px;
   }
 }
