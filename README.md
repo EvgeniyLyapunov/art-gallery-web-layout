@@ -42,12 +42,13 @@
     <img width="50" height="50" title="swiper" src="https://user-images.githubusercontent.com/77357671/232847439-a3d37300-7326-4110-a78e-ca5fd1a958bf.svg"/>
   </a>&nbsp;&nbsp;
   <a href="https://just-validate.dev/" >
-    <img  height="50" title="just-validate" src="https://user-images.githubusercontent.com/77357671/232849661-6cdeb0bb-9652-4768-bed0-fbe027fbf3b4.svg"/>
+    <img  height="50" title="just-validate" src="https://user-images.githubusercontent.com/77357671/235310791-888cfda7-acbb-442c-8f9f-a1427e9dc9a6.svg"/>
   </a>&nbsp;&nbsp;
 </div>
 
 ☘️&nbsp;[Tippy.js](https://atomiks.github.io/tippyjs/)<br>
 ☘️&nbsp;[Choices.js ](https://github.com/Choices-js/Choices)<br>
+
 
 
 
